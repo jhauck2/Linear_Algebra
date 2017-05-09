@@ -6,9 +6,12 @@
 class Mat
 {
 private:
-	Vec x1;
-	Vec y1;
-	Vec z1;
+
+	double mat[3][3];
+
+	//Vec x1;
+	//Vec y1;
+	//Vec z1;
 
 public:
 // Constructors
@@ -26,7 +29,8 @@ public:
 // Member Functions
 	Mat transpose(const Mat &m1);
 
-	double det();
+	double det() const;
+	double det2(double a, double b, double c, double d);
 	Mat inv(const Mat &m1);
 
 	void SetMat(double x11, double x12, double x13, double x21, double x22, double x23, double x31, double x32, double x34);
@@ -36,13 +40,6 @@ public:
 	void PrintMat() const;
 
 	double get(int row, int col);
-
-	Vec getX1();
-
-	Vec getY1();
-	
-	Vec.getZ1();
-
 };
 
 #endif
